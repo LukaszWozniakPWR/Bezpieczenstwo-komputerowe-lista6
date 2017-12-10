@@ -1,0 +1,7 @@
+
+#ifndef BEZPIECZENSTWO6_SETUP_H
+#define BEZPIECZENSTWO6_SETUP_H
+
+int setup();
+
+#endif //BEZPIECZENSTWO6_SETUP_H
