@@ -26,8 +26,7 @@ void generate_rsa_key(int keylength, string private_key_filename, string public_
     int_type n = p * q;
     int_type phi_n = (p - int_type(1)) * (q - int_type(1));
     int_type e;
-    if (q < p) e = find_coprime_for(phi_n, q);
-    else e = find_coprime_for(phi_n, p);
+    e = find_coprime_for(phi_n);
     int_type d = inverse_number(e, phi_n);
     long end_time = boost::posix_time::microsec_clock::local_time().time_of_day().total_milliseconds();
     private_key_file << n << endl << d << endl;

@@ -1,3 +1,5 @@
+Lista 6
+
 Klucz o długości 2048 został wygenerowany w 110 milisekund
 Klucz o długości 4096 został wygenerowany w 1002 milisekund
 Klucz o długości 8192 został wygenerowany w 11207 milisekund
@@ -12,3 +14,14 @@ Klucz o długości 2048 Wiadomości są zgodne 2 milisekund
 Klucz o długości 4096 Wiadomości są zgodne 14 milisekund
 Klucz o długości 8192 Wiadomości są zgodne 65 milisekund
 Klucz o długości 16384 Wiadomości nie są zgodne 275 milisekund
+
+Lista 7 - zadanie 1
+
+Klucz 8192 - nr1
+    Otrzymano wiadomość do podpisania:test - Podpisano w 263 milisekund
+    Otrzymano wiadomość do podpisania:testtest - Podpisano w 272 milisekund
+
+
+Klucz 8192 - nr2
+    Otrzymano wiadomość do podpisania:test - Podpisano w 263 milisekund
+    Otrzymano wiadomość do podpisania:testtest - Podpisano w 272 milisekund

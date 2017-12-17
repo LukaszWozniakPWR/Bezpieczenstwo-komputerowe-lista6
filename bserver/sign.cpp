@@ -6,6 +6,12 @@
 using namespace std;
 using boost::asio::ip::tcp;
 
+int_type calculate_response(int_type x, int_type e, int_type d, int_type n) {
+    int_type r = random_smaller_than(n);
+    int_type y = pow_modulo((pow_modulo(r, e, n) * x), d, n);
+    return (y * inverse_number(r, n)) % n;
+} 
+
 int listen(pair<int_type, int_type> publ_key, pair<int_type, int_type> priv_key) {
     cout << "Rozpoczynam nasłuchiwanie :o" << endl;
     char data[DEFAULT_BUFFLEN];
@@ -27,7 +33,7 @@ int listen(pair<int_type, int_type> publ_key, pair<int_type, int_type> priv_key)
                 cout << "Otrzymano wiadomość do podpisania:" << message << endl;
                 stringstream response;
                 long start_time = boost::posix_time::microsec_clock::local_time().time_of_day().total_milliseconds();
-                response << pow_modulo(string_to_int_type(message), priv_key.second, priv_key.first) << endl;
+                response << calculate_response(string_to_int_type(message), publ_key.second, priv_key.second, priv_key.first) << endl;
                 long end_time = boost::posix_time::microsec_clock::local_time().time_of_day().total_milliseconds();
                 cout << "Podpisano w " << end_time - start_time << " milisekund" << endl;
                 boost::asio::write(socket, boost::asio::buffer(response.str()), error_code);

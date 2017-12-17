@@ -22,12 +22,12 @@ inline bool are_realtively_prime(int_type a, int_type b)
     return gcd(a, b) == 1;
 }
 
-int_type find_coprime_for(int_type a, int_type minimum)
+int_type find_coprime_for(int_type phi)
 {
-    int_type result = int_type(minimum);
-    while (!are_realtively_prime(result, a))
+    int_type result = phi / int_type(100);
+    while (!are_realtively_prime(result, phi))
     {
-        ++result;
+        result = (result + int_type(1)) % phi;
     }
     return result;
 }

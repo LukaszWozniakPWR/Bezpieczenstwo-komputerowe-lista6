@@ -4,6 +4,7 @@
 
 using namespace std;
 using namespace boost::multiprecision;
+using namespace boost::random;
 
 int_type inverse_number(int_type number, int_type range) {
     int_type result;
@@ -48,4 +49,10 @@ int_type pow_modulo(int_type base, int_type exponent, int_type modulo) {
     int_type result;
     mpz_powm(result.backend().data(), base.backend().data(), exponent.backend().data(), modulo.backend().data());
     return result;
+}
+
+int_type random_smaller_than(int_type limit) {
+    mt19937 generator(clock());
+    boost::random::uniform_int_distribution<int_type> distribution = boost::random::uniform_int_distribution<int_type>(int_type(1), limit - int_type(1));
+    return distribution(generator);
 }

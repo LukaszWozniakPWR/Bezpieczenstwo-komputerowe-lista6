@@ -8,5 +8,6 @@ int_type string_to_int_type(std::string a, int base);
 std::pair<int_type, int_type> read_key_from_file(std::string filename);
 std::vector<int_type> read_passwords_from_config_file();
 int_type pow_modulo(int_type base, int_type exponent, int_type modulo);
+int_type random_smaller_than(int_type limit);
 
 #endif //BEZPIECZENSTWO6_CRYPTUTIL_H
