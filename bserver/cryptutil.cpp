@@ -47,7 +47,7 @@ vector<int_type> read_passwords_from_config_file() {
 
 int_type pow_modulo(int_type base, int_type exponent, int_type modulo) {
     int_type result;
-    mpz_powm(result.backend().data(), base.backend().data(), exponent.backend().data(), modulo.backend().data());
+    mpz_powm_sec(result.backend().data(), base.backend().data(), exponent.backend().data(), modulo.backend().data());
     return result;
 }
 

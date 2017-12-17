@@ -18,10 +18,17 @@ Klucz o długości 16384 Wiadomości nie są zgodne 275 milisekund
 Lista 7 - zadanie 1
 
 Klucz 8192 - nr1
-    Otrzymano wiadomość do podpisania:test - Podpisano w 263 milisekund
-    Otrzymano wiadomość do podpisania:testtest - Podpisano w 272 milisekund
+    Otrzymano wiadomość do podpisania:testtest - Podpisano w 298 milisekund
 
 
 Klucz 8192 - nr2
-    Otrzymano wiadomość do podpisania:test - Podpisano w 263 milisekund
-    Otrzymano wiadomość do podpisania:testtest - Podpisano w 272 milisekund
+    Otrzymano wiadomość do podpisania:testtest - Podpisano w 256 milisekund
+
+Lista 7 - zadanie 2
+
+Klucz 8192 - nr1
+    Otrzymano wiadomość do podpisania:testtest - Podpisano w 516 milisekund
+
+
+Klucz 8192 - nr2
+    Otrzymano wiadomość do podpisania:testtest - Podpisano w 561 milisekund
